@@ -2,6 +2,19 @@ const educatorsStaffLink = document.getElementById("educators-staff-link");
 const programsLink = document.getElementById("programs-link");
 const facilitiesLink = document.getElementById("facilities-link");
 
+let hamburger = document.getElementById('hamburger-button')
+let exitHamburger = document.getElementById('exit-navbar')
+let navbarOptions = document.getElementById('navbar-options')
+
+hamburger.addEventListener('click', () => {
+    navbarOptions.style.right = '0px';
+})
+
+exitHamburger.addEventListener('click', () => {
+    navbarOptions.style.right = '-400px';
+})
+
+
 educatorsStaffLink.addEventListener("click", (event) => {
   let academicMentorContainer = document.getElementsByClassName(
     "mentor-characteristics"
