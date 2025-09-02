@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Pillars University</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Great+Vibes&family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&family=TASA+Orbiter:wght@400..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel = 'stylesheet' href = '../styles/login.css'>
+    <script type = 'module' src = '../javascript/login.js'></script>
+</head>
+<body>
+    <div class = 'navbar-container'>
+        <p id = 'navbar-title'>Five Pillars University</p>
+            <ul id = 'navbar-options'>
+                <button id = 'exit-navbar'><i class="fa-solid fa-xmark"></i></button>
+                <li><a href = '../index.html'><button id = 'home-button'>Home</button></a></li>
+                <li><a href = './about.html'><button id = 'about-button'>About us</button></a></li>
+                <li><a href = './login.html'><button id = 'register-button'>Register</button></a></li>
+            </ul>
+        <button id = 'hamburger-button'><i class="fa-solid fa-bars"></i></button>    
+    </div>
+    <div id = 'page-content'>
+
+        <div id = 'login-container'>
+            <p id = 'login-title'>Login to an existing account</p>
+            <input placeholder = 'Email' id = 'username-input' type = 'email' required>
+            <input placeholder = 'Password' id = 'password-input' type = 'password' required>
+            <div id = 'more-options'>
+                <div>
+                    <input id = 'remember-me' type = 'checkbox'>
+                    <label for = 'remember-me'>Remember me</label>
+                </div>
+                <a>Forgot password</a>
+            </div>
+            <button id = 'login-button'>Log in</button>
+            <a id = 'new-account-button'>Don't have an account? Register now!</a>
+        </div>
+
+        <div id = 'register-container'>
+            <p id = 'register-title'>Register a new account</p>
+            <form id = 'input-container'>
+
+                <li id = 'personal-information'>
+                    <p class = 'input-title'>Personal information</p>
+                    <ul><input class = 'register-input' placeholder = 'First name' id = 'first-name' type = 'text' autocomplete = 'off' required></ul>
+                    <ul><input class = 'register-input' placeholder = 'Middle name' id = 'middle-name' type = 'text' autocomplete = 'off' required></ul>
+                    <ul><input class = 'register-input' placeholder = 'Last name' id = 'last-name' type = 'text' autocomplete = 'off' required></ul>
+                    <ul><input class = 'register-input' placeholder = 'Extension name (leave blank if none)' id = 'extension-name' type = 'text' autocomplete = 'off'></ul>
+                </li>
+
+                <li id = 'education-background'>
+                    <p class = 'input-title'>Educational background</p>
+                    <ul><input class = 'register-input education-input' placeholder = 'Secondary education' id = 'secondary-educ' type = 'text' autocomplete = 'off' required><input class = 'register-input year-input' id = 'secondary-year' placeholder = 'Year' type = 'number' autocomplete = 'off' required></ul>
+                    <ul><input class = 'register-input education-input' placeholder = 'Primary education' id = 'primary-educ' type = 'text' autocomplete = 'off' required><input class = 'register-input year-input'  id = 'primary-year' placeholder = 'Year' type = 'number' autocomplete = 'off' required></ul>
+                </li>
+
+                <li id = 'account-information'>
+                    <p class = 'input-title'>Account information</p>
+                    <ul><input class = 'register-input' placeholder = 'Email address' id = 'email' type = 'email' autocomplete = 'off' required></ul>
+                    <ul><input class = 'register-input' placeholder = 'Password' id = 'password' type = 'password' autocomplete = 'off' required></ul>
+                    <ul><input class = 'register-input' placeholder = 'Phone number' id = 'phone-number' type = 'number' autocomplete = 'off' required></ul>
+                </li>
+
+                <label class = 'input-title' for = 'selected-course'>Select desired course</label>
+                <select class = 'register-input' id = 'selected-course' required>
+                    <option value="" selected hidden>Select a category</option>
+                    <option>Bachelor of Arts in Communication</option>
+                    <option>Bachelor of Arts in Creative Writing</option>
+                    <option>Bachelor of Arts in Philosophy</option>
+                    <option>Bachelor of Arts in Sociology</option>
+                    <option>Bachelor of Arts in Political Science</option>
+                    <option>Bachelor of Arts in Language and Literature</option>
+                    <option>Bachelor of Science in Computer Science</option>
+                    <option>Bachelor of Science in Information Technology</option>
+                    <option>Bachelor of Science in Software Engineering</option>
+                    <option>Bachelor of Science in Civil Engineering</option>
+                    <option>Bachelor of Science in Electrical Engineering</option>
+                    <option>Bachelor of Science in Data Science</option>
+                </select>
+
+                <p class = 'input-title'>Can't decide? What are your interests?</p>
+                <div id = 'interest-choices'>
+                    <div><input class = 'interest-category' type = 'checkbox' name = 'technology' id = 'technology'><label for = 'technology'>Technology</label></div>
+                    <div><input class = 'interest-category' type = 'checkbox' name = 'problem-solving' id = 'problem-solving'><label for = 'problem-solving'>Problem-solving</label></div>
+                    <div><input class = 'interest-category' type = 'checkbox' name = 'building' id = 'building'><label for = 'building'>Building</label></div>
+                    <div><input class = 'interest-category' type = 'checkbox' name = 'programming' id = 'programming'><label for = 'programming'>Programming</label></div>
+                    <div><input class = 'interest-category' type = 'checkbox' name = 'politics' id = 'politics'><label for = 'politics'>Politics</label></div>
+                    <div><input class = 'interest-category' type = 'checkbox' name = 'journalism' id = 'journalism'><label for = 'journalism'>Journalism</label></div>
+                    <div><input class = 'interest-category' type = 'checkbox' name = 'human-behaviour' id = 'human-behaviour'><label for = 'human-behaviour'>Human behaviour</label></div>
+                    <div><input class = 'interest-category' type = 'checkbox' name = 'public-speaking' id = 'public-speaking'><label for = 'public-speaking'>Public speaking</label></div>
+                    <div><input class = 'interest-category' type = 'checkbox' name = 'logical-thinking' id = 'logical-thinking'><label for = 'logical-thinking'>Logical thinking</label></div>
+                </div>
+
+                <div id = 'interest-result'>
+                    <p id = 'interest-title'>Based on your interest(s), the courses suitable for you is:</p>
+                    <p id = 'interest-output'></p>
+                </div>
+
+                <button id = 'submit-button' type = 'submit'>Register</button>
+            </form>
+            <a id = 'login-prompt'>Already have an account?</a>
+        </div>
+    </div>
+
+    <div id = 'background-container'>
+        <img id = 'background-img' src = '../assets/background-image.png'>
+    </div>
+</body>
+</html>
