@@ -64,7 +64,7 @@ body{
 #home-button, #about-button, #register-button, #hamburger-button, #exit-navbar{
     all: unset;
     color: azure;
-    font-size: 1.3rem;
+    font-size: clamp(0.8rem, 2vw + 0.5rem, 1.2rem);
     margin: 30px;
     font-weight: 300;
     transition: all 0.2s ease-in-out;
@@ -101,7 +101,7 @@ body{
     z-index: 10;
     transform: translate(-50%, -50%);
     background-color: transparent;
-    height: clamp(600px, 80vh + 0.5em, 650px);
+    height: clamp(610px, 83vh + 0.5rem, 650px);
     width: clamp(420px, 55vw, 500px);
     border-radius: 12px;
     box-shadow: 0px 16px 30px 4px rgba(0,0,0,0.48);
