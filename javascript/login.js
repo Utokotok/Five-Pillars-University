@@ -31,6 +31,9 @@ let submitButton = document.getElementById('submit-button')
 let interests = []
 let usernameInput = document.getElementById('username-input')
 let passwordInput = document.getElementById('password-input')
+
+let regBut = document.getElementById('register-button');
+
 hamburger.addEventListener('click', () => {
     navbarOptions.style.right = '0px';
 })
@@ -39,19 +42,41 @@ exitHamburger.addEventListener('click', () => {
     navbarOptions.style.right = '-400px';
 })
 
-registerAccountButton.addEventListener('click', () => {
+function switchToRegister(){
+    regBut.textContent = 'Login'
     registerPrompt.style.left = '50%'
     registerPrompt.style.transform = 'translate(-50%, -50%)'
     loginPrompt.style.transform = 'translate(300%, 70%)'
     registerPrompt.style.opacity = '1'    
     loginPrompt.style.opacity = '0'
-})
+    isReg = !isReg
+}
 
-loginAccountButton.addEventListener('click', () => {
+function switchToLogin(){
+    regBut.textContent = 'Register'
     registerPrompt.style.transform = 'translate(-300%, 60%)'
     loginPrompt.style.transform = 'translate(-50%, -50%)'
     loginPrompt.style.opacity = '1'
     registerPrompt.style.opacity = '0'
+    isReg = !isReg
+}
+
+let isReg = true;
+
+regBut.addEventListener('click', () => {
+    if(isReg){
+        switchToLogin()
+    } else{
+        switchToRegister()
+    }
+})
+        
+registerAccountButton.addEventListener('click', () => {
+    switchToRegister()
+})
+
+loginAccountButton.addEventListener('click', () => {
+    switchToLogin()
 })
 
 submitButton.addEventListener('click', () => {

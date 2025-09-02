@@ -100,13 +100,25 @@ body{
     left: 50%;
     z-index: 10;
     transform: translate(-50%, -50%);
+    background-color: transparent;
+    height: clamp(550px, 80vh, 650px);
+    width: clamp(420px, 55vw, 500px);
+    border-radius: 12px;
+    box-shadow: 0px 16px 30px 4px rgba(0,0,0,0.48);
+    transition: all 0.2s ease-in-out;
+}
+
+#register-container::after{
+    content: '';
+    position: absolute;
     border: 1px solid hsl(340 0% 62%);
     background-color: hsl(300 0% 95%);
     height: clamp(550px, 80vh, 650px);
     width: clamp(420px, 55vw, 500px);
     border-radius: 12px;
     box-shadow: 0px 16px 30px 4px rgba(0,0,0,0.48);
-    transition: all 0.2s ease-in-out;
+    opacity: 0.85;
+    z-index: -5;
 }
 
 .input-title{
