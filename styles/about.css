@@ -828,6 +828,5 @@ main section #program-text-container .information {
 @media (max-width: 420px) {
   main section div.mentor-class p:first-of-type {
     margin-top: 10%;
-    color: red;
   }
 }
