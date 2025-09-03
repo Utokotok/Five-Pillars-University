@@ -8,7 +8,7 @@ export class CourseObject{
 
     static initializeObjects(){
         CourseObject.courseObjects = [];
-        CourseObject.courseObjects.push(new CourseObject('Bachelor of Arts in Communication', 'BAComm', ['public speaking', 'journalism']))
+        CourseObject.courseObjects.push(new CourseObject('Bachelor of Arts in Communication', 'BAComm', ['public-speaking', 'journalism']))
         CourseObject.courseObjects.push(new CourseObject('Bachelor of Arts in Creative Writing', 'BACW', ['journalism']))
         CourseObject.courseObjects.push(new CourseObject('Bachelor of Arts in Philosophy', 'BSPhilo', ['human-behaviour', 'logical-thinking']))
         CourseObject.courseObjects.push(new CourseObject('Bachelor of Arts in Sociology', 'BASoc', ['human-behaviour']))
