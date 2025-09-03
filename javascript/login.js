@@ -139,7 +139,8 @@ function createAccount(){
     try{
         if(!isValid) throw new Error('Invalid forms')
         if(localStorage.getItem(email.value) != null) throw new Error('Account already exists')
-        if(secondaryYear.value < 1970 || secondaryEduc.value > 2025) throw new Error('Invalid year completion')    
+        if(secondaryYear.value < 1970 || secondaryYear.value > 2025) throw new Error('Invalid year completion') 
+        if(primaryYear.value < 1970 || primaryYear.value > 2025) throw new Error('Invalid year completion')       
         if(phoneNumber.value.length != 10 || !(phoneNumber.value.startsWith('9'))) throw new Error('Invalid phone number')    
         let newAccount = new AccountObject(
             firstName.value,
